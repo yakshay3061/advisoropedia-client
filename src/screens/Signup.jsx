@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./signup.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 import { faUser, faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
 
@@ -32,13 +32,14 @@ const Signup = () => {
 
         try {
           const response = await axios.post(
-            "https://advisoropedia-server.onrender.com/api/users/signup", 
-            values);
+            "https://advisoropedia-server.onrender.com/api/users/signup",
+            values
+          );
 
-            localStorage.setItem("token", response.data.token);
+          localStorage.setItem("token", response.data.token);
           // axios.defaults.headers.common['Authorization'] = `Bearer ${response.data.token}`;
 
-          console.log('token: ' , response.data.token); 
+          console.log("token: ", response.data.token);
 
           navigateToPosts();
         } catch (error) {
