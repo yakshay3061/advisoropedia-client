@@ -10,7 +10,7 @@ const Posts = () => {
 
   const fetchPosts = async () => {
     const res = await axios.get(
-      `http://localhost:8080/api/users/postlist?filter=${page}`,
+      `https://advisoropedia-server.onrender.com/api/users/postlist?filter=${page}`,
       {
         headers: {
           authorization: token,

@@ -32,7 +32,7 @@ const Signup = () => {
 
         try {
           const response = await axios.post(
-            "http://localhost:8080/api/users/signup", 
+            "https://advisoropedia-server.onrender.com/api/users/signup", 
             values);
 
             localStorage.setItem("token", response.data.token);
