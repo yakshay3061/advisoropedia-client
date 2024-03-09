@@ -32,7 +32,7 @@ const Signup = () => {
 
         try {
           const response = await axios.post(
-            "https://advisoropedia-server.onrender.com/api/users/signup",
+            "https:localhost:8080/api/users/signup",
             values
           );
 
